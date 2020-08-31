@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "ToSearch": "../../components/tosearch/index",
+    "goodsList": "../../components/goodslist/index"
+  },
+  "navigationBarTitleText": "首页"
+}

@@ -1,0 +1,72 @@
+page,
+.container {
+    height: 100%;
+}
+/* 有数据 */
+.isfull .data {
+    margin-bottom: 100rpx;
+}
+/* 每一个 */
+.each {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+/* 每一个的单选框 */
+.each .select {
+    width: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 卡片 */
+.each .card {
+    flex: 1;
+}
+/* 每一个的删除 */
+.each .deleteitem {
+    width: 100rpx;
+    text-align: center;
+    color: #00b26a;
+}
+/* 底部 */
+.footer .confirm {
+    background-color: rgb(238, 228, 228);
+    width: 100%;
+    height: 100rpx;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 全选框 */
+.confirm .allselect {
+    margin-left: 20rpx;
+}
+/* 我的联系方式 */
+.confirm .contact {
+    border-radius: 50rpx;
+    padding: 20rpx 20rpx;
+    color: #fff;
+    background-color: #53c7bf;
+}
+/* 确认按钮 */
+.confirm .buy {
+    margin-right: 30rpx;
+}
+
+.buy .btn {
+    border-radius: 50rpx;
+    padding: 20rpx 30rpx;
+    color: #fff;
+    background-color: #fb4a30;
+}
+
+/* 无数据去逛逛 */
+.bottom-button {
+    width: 160px;
+    height: 40px;
+}

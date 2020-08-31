@@ -1,0 +1,72 @@
+{
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-search": "/miniprogram_npm/vant-weapp/search/index",
+    "van-submit-bar": "/miniprogram_npm/vant-weapp/submit-bar/index",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
+    "van-tag": "/miniprogram_npm/vant-weapp/tag/index",
+    "van-radio": "/miniprogram_npm/vant-weapp/radio/index",
+    "van-radio-group": "/miniprogram_npm/vant-weapp/radio-group/index",
+    "van-checkbox": "/miniprogram_npm/vant-weapp/checkbox/index",
+    "van-checkbox-group": "/miniprogram_npm/vant-weapp/checkbox-group/index",
+    "van-grid": "/miniprogram_npm/vant-weapp/grid/index",
+    "van-grid-item": "/miniprogram_npm/vant-weapp/grid-item/index",
+    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "van-divider": "/miniprogram_npm/vant-weapp/divider/index",
+    "van-image": "/miniprogram_npm/vant-weapp/image/index",
+    "van-goods-action": "/miniprogram_npm/vant-weapp/goods-action/index",
+    "van-goods-action-icon": "/miniprogram_npm/vant-weapp/goods-action-icon/index",
+    "van-goods-action-button": "/miniprogram_npm/vant-weapp/goods-action-button/index",
+    "van-action-sheet": "/miniprogram_npm/vant-weapp/action-sheet/index",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-stepper": "/miniprogram_npm/vant-weapp/stepper/index",
+    "van-dropdown-menu": "/miniprogram_npm/vant-weapp/dropdown-menu/index",
+    "van-dropdown-item": "/miniprogram_npm/vant-weapp/dropdown-item/index",
+    "van-empty": "/miniprogram_npm/vant-weapp/empty/index",
+    "van-loading": "/miniprogram_npm/vant-weapp/loading/index",
+    "van-swipe-cell": "/miniprogram_npm/vant-weapp/swipe-cell/index",
+    "van-card": "/miniprogram_npm/vant-weapp/card/index",
+    "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index",
+    "van-field": "/miniprogram_npm/vant-weapp/field/index"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/category/index",
+    "pages/cart/index",
+    "pages/search/index",
+    "pages/searchlist/index",
+    "pages/goodsdetail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff2d4a",
+    "navigationBarTitleText": "vantWeapp小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#ff2d4a",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/icon_home@3x.png",
+        "selectedIconPath": "./images/icon_home_active@3x.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "./images/icon_category@3x.png",
+        "selectedIconPath": "./images/icon_category_active@3x.png"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "text": "预购车",
+        "iconPath": "./images/icon_cart@3x.png",
+        "selectedIconPath": "./images/icon_cart_active@3x.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

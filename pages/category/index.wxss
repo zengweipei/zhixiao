@@ -1,0 +1,6 @@
+/* 有搜索数据 */
+.searchdata .loading {
+  text-align: center;
+  padding: 20rpx;
+  background-color: #ccc;
+}

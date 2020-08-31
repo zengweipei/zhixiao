@@ -1,0 +1,30 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <van-search input-align="center" shape="round" background="#23a6f1" value="{{ keyword }}" placeholder="{{defaultKeyword}}" bind:change="onChange" bind:search="doSearch"></van-search>
+  </view>
+  <!-- 选择或者重置 -->
+  <view class="choose">
+    <!-- 下拉选择分类类型 -->
+    <view class="dropdown">
+      <van-dropdown-menu>
+        <van-dropdown-item value="{{ goodstype }}" options="{{ goodstypelist }}" bind:change="changegoodstype" />
+      </van-dropdown-menu>
+    </view>
+    <!-- 重置 -->
+    <view class="reset">
+      <van-button type="default" block bind:tap="reset">重置</van-button>
+    </view>
+  </view>
+  <!-- 有搜索数据 -->
+  <view wx:if="{{goodsList.length>0}}" class="searchdata">
+    <goodsList goodslist="{{goodsList}}" />
+    <view class="loading" bind:tap="loadmore">
+      <van-loading size="24px" type="spinner" color="#1989fa">{{loadingText}}</van-loading>
+    </view>
+  </view>
+  <!-- 没有搜索数据 -->
+  <view class="nosearchdata" wx:else>
+    <van-empty image="search" description="搜索不到呢，请换个关键词，亲" />
+  </view>
+</view>

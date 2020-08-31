@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "goodsListPubuliu": "../../components/goodslistpubuliu/index"
+  },
+  "navigationBarTitleText": "分类"
+}

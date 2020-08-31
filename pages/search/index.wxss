@@ -1,0 +1,56 @@
+/* 内容 */
+.search-keyword {
+	width: 100%;
+	background-color: rgb(242, 242, 242);
+}
+/* 历史搜索和热门搜索 */
+.keyword-box {
+	height: calc(100vh - 110rpx);
+	border-radius: 20rpx 20rpx 0 0;
+	background-color: #fff;
+}
+/* 历史搜索或者热门搜索 */
+.keyword-box .keyword-block {
+	padding: 10rpx 0;
+}
+/* 历史搜索或者热门搜索的标题栏 */
+.keyword-box .keyword-block .keyword-list-header {
+	width: 94%;
+	padding: 10rpx 3%;
+	font-size: 27rpx;
+	color: #333;
+	display: flex;
+	justify-content: space-between;
+}
+.keyword-box .keyword-block .keyword-list-header image {
+	width: 40rpx;
+	height: 40rpx;
+}
+/* 历史搜索或者热门搜索的遍历内容 */
+.keyword-box .keyword-block .keyword {
+	width: 94%;
+	padding: 3px 3%;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: flex-start;
+}
+/* 隐藏热门搜索时的提示内容 */
+.keyword-box .keyword-block .hide-hot-tis {
+	display: flex;
+	justify-content: center;
+	font-size: 28rpx;
+	color: #6b6b6b;
+}
+/* 历史搜索或热门搜索的遍历出来的每一个的内容的样式 */
+.keyword-box .keyword-block .keyword > view {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 60rpx;
+	padding: 0 20rpx;
+	margin: 10rpx 20rpx 10rpx 0;
+	height: 60rpx;
+	font-size: 28rpx;
+	background-color: rgb(242, 242, 242);
+	color: #6b6b6b;
+}

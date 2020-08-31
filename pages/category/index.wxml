@@ -1,0 +1,20 @@
+<view class="container">
+  <view>
+    <van-dropdown-menu active-color="#51c9c0">
+      <van-dropdown-item value="{{ goodstype }}" options="{{ goodstypelist }}" bind:change="changegoodstype" />
+      <!-- 每页显示条数 -->
+      <van-dropdown-item value="{{ limitnum }}" options="{{ limitarr }}" bind:change="changepagenums" />
+    </van-dropdown-menu>
+  </view>
+   <!-- 有搜索数据 -->
+  <view wx:if="{{goodsList.length>0}}" class="searchdata">
+    <goodsListPubuliu goodslist="{{goodsList}}" />
+    <view class="loading" bind:tap="loadmore">
+      <van-loading size="24px" type="spinner" color="#1989fa">{{loadingText}}</van-loading>
+    </view>
+  </view>
+  <!-- 没有搜索数据 -->
+  <view class="nosearchdata" wx:else>
+    <van-empty image="search" description="搜索不到呢，请换个分类搜索，亲" />
+  </view>
+</view>

@@ -1,0 +1,22 @@
+/* pages/searchlist/index.wxss */
+
+/* 选择或者重置 */
+.choose {
+  display: flex;
+  margin: 20rpx;
+}
+
+.choose .dropdown {
+  width: 50%;
+}
+
+.choose .reset {
+  width: 50%;
+}
+
+/* 有搜索数据 */
+.searchdata .loading {
+  text-align: center;
+  padding: 20rpx;
+  background-color: #ccc;
+}

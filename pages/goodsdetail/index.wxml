@@ -1,0 +1,32 @@
+<!-- pages/goodsdetail/index.wxml -->
+<view class="container">
+  <!-- 首图 -->
+  <view class="image">
+    <van-image round width="500rpx" height="500rpx" lazy-load src="{{goodsdetail.img}}" />
+  </view>
+  <!-- 名称 -->
+  <view class="name">{{goodsdetail.name}}</view>
+  <!-- 限制 -->
+  <view class="must">{{goodsdetail.must}}</view>
+  <!-- 其它 -->
+  <view class="else">
+    <!-- 分类类型 -->
+    <view class="typename">{{goodsdetail.good_type_name}}</view>
+    <!-- 价格 -->
+    <view class="price">
+      <text class="rmb">¥</text>
+      <text class="nums">{{goodsdetail.price}}</text>
+    </view>
+  </view>
+  <!-- 富文本框 -->
+  <view class="richtext">
+    <rich-text nodes="{{goodsdetail.desc}}"></rich-text>
+  </view>
+  <!-- 底部商品导航 -->
+  <view class="footer">
+    <van-goods-action>
+      <van-goods-action-icon link-type="switchTab" url="/pages/cart/index" icon="cart-o" text="预购车" />
+      <van-goods-action-button color="#7232dd" text="加入预购车" bind:click="addtoCart" data-detail="{{goodsdetail}}" />
+    </van-goods-action>
+  </view>
+</view>

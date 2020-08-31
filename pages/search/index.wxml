@@ -1,0 +1,45 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <van-search shape="round" background="#23a6f1" value="{{ keyword }}" label="{{leftText}}" placeholder="{{defaultKeyword}}" use-action-slot bind:change="onChange" bind:search="doSearch">
+      <view slot="action" bind:tap="doSearch">搜索</view>
+    </van-search>
+  </view>
+  <!-- 内容 -->
+  <view class="search-keyword">
+    <!-- 历史搜索和热门搜索 -->
+    <scroll-view class="keyword-box" scroll-y>
+      <!-- 历史搜索 -->
+      <view class="keyword-block" wx:if="oldKeywordList.length > 0">
+        <view class="keyword-list-header">
+          <view>历史搜索</view>
+          <view>
+            <image bind:tap="oldDelete" src="../../images/HM-search/delete.png"></image>
+          </view>
+        </view>
+        <view class="keyword">
+          <view wx:for="{{oldKeywordList}}" data-keyword="{{item}}" bind:tap="doSearch" wx:key="index">
+            {{ item }}
+          </view>
+        </view>
+      </view>
+      <!-- 热门搜索 -->
+      <view class="keyword-block">
+        <view class="keyword-list-header">
+          <view>热门搜索</view>
+          <view>
+            <image bind:tap="hotToggle" src="../../images/HM-search/attention{{forbid}}.png"></image>
+          </view>
+        </view>
+        <view class="keyword" wx:if="{{forbid == ''}}">
+          <view wx:for="{{hotKeywordList}}" data-keyword="{{item}}" bind:tap="doSearch" wx:key="index">
+            {{ item }}
+          </view>
+        </view>
+        <view class="hide-hot-tis" wx:else>
+          <view>当前搜热门搜索已隐藏</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

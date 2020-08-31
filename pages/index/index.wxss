@@ -1,0 +1,51 @@
+/* 欢迎词 */
+.welcome .title {
+    padding: 30rpx;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40rpx;
+    color: #f8d1af;
+}
+
+/* 所有商品 */
+.allgoods {
+  margin-bottom: 100rpx;
+}
+/* 标题 */
+.allgoods .title {
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 40rpx;
+    position: relative;
+    padding-left: 50rpx;
+    color: #00cddb;
+}
+.allgoods .title::before {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 60rpx;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 有搜索数据 */
+.searchdata .loading {
+    text-align: center;
+    padding: 20rpx;
+    background-color: #ccc;
+}
+
+/* 底部内容 */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10rpx;
+    text-align: center;
+    line-height: 1.5;
+    color: #ccc;
+    background-color: #f5f7fc;
+}

@@ -1,0 +1,53 @@
+<view class="container">
+  <!-- 有数据 -->
+  <view class="isfull" wx:if="{{!isEmpty}}">
+    <view class="data">
+      <!-- 每一个 -->
+      <view class="each" wx:for="{{wantBuyList}}" wx:key="index">
+        <!-- 单选框 -->
+        <view class="select">
+          <van-checkbox checked-color="#ff8c00" value="{{ item.isselect }}" bind:change="onChangeitemSelected" data-eachselect="{{!item.isselect}}" data-eachitem="{{item}}"></van-checkbox>
+        </view>
+        <!-- 商品卡片 -->
+        <view class="card">
+          <van-card price="{{item.price}}" desc="{{item.must}}" title="{{item.name}}" thumb="{{ item.img }}">
+            <view slot="tags" class="tags">{{item.good_type_name}}</view>
+          </van-card>
+        </view>
+        <!-- 删除 -->
+        <view class="deleteitem" data-id="{{item.id}}" bind:tap="deleteItem">删除</view>
+      </view>
+    </view>
+    <!-- 底部 -->
+    <view class="footer">
+      <view class="confirm">
+        <view class="allselect">
+          <van-checkbox value="{{ isAllSelected }}" checked-color="#FF8C00" bind:change="onChange">
+            全选
+          </van-checkbox>
+        </view>
+        <view class="contact" bind:tap="contactways">我的联系方式</view>
+        <view class="buy">
+          <view class="btn" bind:tap="onClickButton">确认预购</view>
+        </view>
+      </view>
+    </view>
+    <!-- 弹窗信息 -->
+    <van-dialog id="van-dialog" />
+    <!-- 联系方式弹出层 -->
+    <van-popup show="{{ showPopup }}" position="bottom" bind:close="onClosePopup">
+      <van-cell-group>
+        <van-field model:value="{{ qq }}" label="QQ" placeholder="请输入QQ" />
+        <van-field model:value="{{ wechat }}" label="微信" placeholder="请输入微信" />
+        <van-field model:value="{{ phone }}" label="手机号" placeholder="请输入手机号" border="{{ false }}" />
+        <van-field model:value="{{ leavemessage }}" label="留言" type="textarea" placeholder="请输入留言" autosize border="{{ false }}" />
+      </van-cell-group>
+    </van-popup>
+  </view>
+  <!-- 无数据 -->
+  <view class="empty" wx:else>
+    <van-empty description="预购车空空如也">
+      <van-button round type="danger" class="bottom-button" bind:click="gotuShop">去逛逛</van-button>
+    </van-empty>
+  </view>
+</view>

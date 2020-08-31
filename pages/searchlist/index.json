@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "goodsList": "../../components/goodslist/index"
+  },
+  "navigationBarTitleText": "搜索详情"
+}

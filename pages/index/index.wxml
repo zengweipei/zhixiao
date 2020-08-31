@@ -1,0 +1,26 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <ToSearch />
+  <!-- 欢迎词 -->
+  <view class="welcome">
+    <view class="title">欢迎，亲爱的游客，祝您使用愉快！在预购车提交预购商品信息和联系方式之后，请耐心等待商家主动联系您哦，相信会给您带来不一样的购物体验！</view>
+  </view>
+  <!-- 所有商品列表数据 -->
+  <view class="allgoods">
+    <view class="title">所有商品　厂家直发</view>
+    <view class="content">
+      <!-- 有搜索数据 -->
+      <view wx:if="{{goodsList.length>0}}" class="searchdata">
+        <goodsList goodslist="{{goodsList}}" />
+        <view class="loading" bind:tap="loadmore">
+          <van-loading size="24px" type="spinner" color="#1989fa">{{loadingText}}</van-loading>
+        </view>
+      </view>
+      <!-- 没有搜索数据 -->
+      <view class="nosearchdata" wx:else>
+        <van-empty image="search" description="搜索不到呢，请换个关键词，亲" />
+      </view>
+    </view>
+  </view>
+  <view class="footer">此小程序功能更新迭代中，陆续将会推出更齐全，更便捷的各种功能，敬请期待！</view>
+</view>

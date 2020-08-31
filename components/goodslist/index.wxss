@@ -1,0 +1,59 @@
+/* 每一项 */
+.each {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 0;
+}
+/* 图片 */
+.each .image {
+    width: 200rpx;
+    height: 200rpx;
+    box-sizing: border-box;
+    padding: 10rpx;
+    margin-right: 20rpx;
+}
+
+.each .image > image {
+    width: 100%;
+    height: 100%;
+}
+/* 详细内容 */
+.content {
+    height: 200rpx;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* 名称 */
+.content .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/* 限制 */
+.content .must {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/* 其它 */
+.content .else {
+    display: flex;
+    justify-content: space-around;
+}
+/* 价格 */
+.content .else .price .rmb {
+    font-size: 25rpx;
+    color: #f00;
+    margin-right: 10rpx;
+}
+.content .else .price .num {
+    font-size: 40rpx;
+    color: #f00;
+}
